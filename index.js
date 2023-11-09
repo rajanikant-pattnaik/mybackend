@@ -21,6 +21,9 @@ const loanSanct = require("./routes/processes_input/loanSanct");
 const loanClosure = require("./routes/processes_input/loanClosure");
 const depositAdjust = require("./routes/processes_input/depositAdjust");
 const membershipClosure = require("./routes/processes_input/membershipClosure");
+const cashtrans = require("./routes/processes_input/cashtrans");
+const banktrans=require("./routes/processes_input/banktrans");
+const notes=require("./routes/processes_input/notes");
 
 dotenv.config();
 mongoose
@@ -43,6 +46,9 @@ app.use("/api/loanSanct", loanSanct);
 app.use("/api/loanClosure", loanClosure);
 app.use("/api/depositAdjust", depositAdjust);
 app.use("/api/membershipClosure", membershipClosure);
+app.use("/api/cashtrans", cashtrans);
+app.use("/api/banktrans",banktrans);
+app.use("/api/notes",notes);
 
 // Start the server
 app.listen(port, () => {
